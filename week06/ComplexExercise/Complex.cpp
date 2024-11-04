@@ -4,6 +4,17 @@
 using namespace std;
 
 
+Complex::Complex(const Complex& c) : real(c.real), imag(c.imag) {
+    cout << "Copy Constructor called." << endl;
+}
+
+Complex::~Complex() {
+    cout << "Object Destructed";
+    ShowComplex();
+    cout << "\n";
+}
+
+
 void Complex::SetComplex(double r, double i) {
     real = r;
     imag = i;

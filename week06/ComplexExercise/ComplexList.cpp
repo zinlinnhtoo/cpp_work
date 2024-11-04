@@ -9,6 +9,14 @@ ComplexList::ComplexList(int s) {
 	arr = new Complex[size];
 }
 
+ComplexList::ComplexList(const ComplexList& c): size(c.size) {
+	cout << "Copy Constructor called" << endl;
+	arr = new Complex[c.size];
+	for (int i = 0; i < size; ++i) {
+		arr[i] = c.arr[i];
+	}
+}
+
 ComplexList::~ComplexList() {
 	delete[] arr;
 }

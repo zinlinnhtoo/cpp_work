@@ -4,6 +4,9 @@
 
 using namespace std;
 
+void Fn1(Complex);
+Complex Fn2(Complex& c);
+
 int main() {
     //Complex c1, c2;
 
@@ -38,7 +41,7 @@ int main() {
     //c4.ShowComplex();
 
 
-    ComplexList cl1(10);
+    /*ComplexList cl1(10);
     ComplexList cl2(5);
 
     for (int i = 0; i < cl1.Length(); i++)
@@ -63,7 +66,63 @@ int main() {
     {
         cout << "Element " << i << ":";
         cl2.Get(i).ShowComplex();
+    }*/
+
+    /*Complex c1(1, 2);
+    cout << "c1 initialized" << endl;
+
+    Complex c2 = c1;
+    Complex c3(c1);
+
+    c2.ShowComplex();
+    cout << endl;
+
+    c3.ShowComplex();
+    cout << endl;
+
+
+    cout << "\n >> function called \n" << endl;
+    Fn1(c1);
+    cout << "End" << endl;
+
+
+    cout << "\n >> return from function \n" << endl;
+    Fn2(c1);
+    cout << "End" << endl;*/
+
+    ComplexList cl1(10);
+    for (int i = 0; i < cl1.Length(); i++)
+    {
+        cl1.Set(i, i + 1, (i + 1) * 2);
+    }
+    cout << "Complex List in cl1: " << endl;
+
+    for (int i = 0; i < cl1.Length(); i++)
+    {
+        cout << "Element " << i << ":";
+        cl1.Get(i).ShowComplex();
     }
 
+    ComplexList cl2 = cl1;
+    cout << "Complex List in cl2: " << endl;
+    for (int i = 0; i < cl2.Length(); i++)
+    {
+        cout << "Element " << i << ":";
+        cl2.Get(i).ShowComplex();
+    }
+
+    ComplexList cl3(cl1);
+
+
     return 0;
+}
+
+void Fn1(Complex c) {
+    c.ShowComplex();
+    cout << endl;
+}
+
+Complex Fn2(Complex& c) {
+    cout << "Return from Fn2" << endl;
+    return c;
 }

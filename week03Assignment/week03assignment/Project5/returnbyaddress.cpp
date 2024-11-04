@@ -7,7 +7,7 @@ int main() {
 	int x = 0;
 	int* num;
 	num = increment(&x);
-	cout << "Return by address: " << num << endl;
+	cout << "Return by address: " << x << endl;
 	return 0;
 }
 

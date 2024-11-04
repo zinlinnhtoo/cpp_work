@@ -10,7 +10,7 @@ int main() {
 	return 0;
 }
 
-int& increment(int& n) {
+int increment(int& n) {
 	n++;
 	return n;
 }

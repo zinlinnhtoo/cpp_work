@@ -10,6 +10,8 @@ class ComplexList {
 public:
 	ComplexList(int s = 10);
 
+	ComplexList(const ComplexList& c);
+
 	~ComplexList();
 
 	void Set(int n, double r, double i);

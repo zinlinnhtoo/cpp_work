@@ -8,6 +8,8 @@ private:
 
 public:
     Complex(double r = 0.0, double i = 0.0);
+    Complex(const Complex& c);
+    ~Complex();
 
     void SetComplex(double r, double i);
 
