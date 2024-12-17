@@ -16,7 +16,7 @@ int main() {
 		cout << "Area: " << shapes[i]->GetArea() << endl;
 
 		Rectangle* rect;
-		rect = dynamic_cast<Rectangle*>(shapes[i]);
+		rect = static_cast<Rectangle*>(shapes[i]);
 
 		if (rect != NULL)
 		{
